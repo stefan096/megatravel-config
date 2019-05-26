@@ -1,0 +1,59 @@
+# For random port, the property is set to 0
+server:
+  port: 0
+  # ssl:
+  #   enabled: true
+  #   key-store: classpath:booker.p12
+  #   key-store-password: sifra
+  #   key-store-type: PKCS12
+  #   key-alias: booker
+
+logging:
+    level:
+      com.netflix: WARN
+      org.springframework.web: WARN
+      com.megatravel: DEBUG
+
+eureka:
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_megabooker?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
+    username: root
+    password: stefan
+#    data: 
+#      - classpath:/resources/data.sql
+    initialization-mode: always
+    continue-on-error: true
+    
+
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      ddl-auto: update
+      
+# server:
+#   port: 8452
+#   ssl:
+#     enabled: true
+    # key-store: "booker.p12"
+    # key-store-password: sifra
+    # key-store-type: PKCS12
+
+#    key-alias: booker
+#    client-auth: need
+#    trust-store: classpath:bookerTrust.p12
+#    trust-store-password: sifra
+#    trust-store-type: PKCS12
+#  endpoint.1: https://localhost:8442/certificates/normal
+
