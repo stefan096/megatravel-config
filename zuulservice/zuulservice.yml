@@ -31,7 +31,7 @@ eureka:
 
 zuul:
   sensitiveHeaders: Cookie, Set-Cookie
-  ignored-services: stefanservice, demoservice, converterservice, loginAndRegistration, front
+  ignored-services: stefanservice, demoservice, converterservice, loginAndRegistration, front, demosarservice
   prefix:  /api
   routes:
     demoservice: /demo/**
@@ -39,3 +39,4 @@ zuul:
     loginAndRegistration: /login/**
     converterservice: /convert/**
     front: /front/**
+    demosarservice: /demosoapandrest/**
