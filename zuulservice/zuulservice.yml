@@ -39,4 +39,6 @@ zuul:
     loginAndRegistration: /login/**
     converterservice: /convert/**
     front: /front/**
-    demosarservice: /demosoapandrest/**
+    demosarservice:
+      path: /demosoapandrest/**
+      stripPrefix: false
