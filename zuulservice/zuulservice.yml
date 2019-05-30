@@ -29,10 +29,15 @@ eureka:
     serviceUrl:
         defaultZone: http://localhost:8761/eureka/
 
+ribbon:
+  ReadTimeout: 30000
+
 zuul:
   sensitiveHeaders: Cookie, Set-Cookie
   ignored-services: stefanservice, demoservice, converterservice, loginAndRegistration, front, demosarservice
   prefix:  /api
+  host:
+    socket-timeout-millis: 30000
   routes:
     demoservice: /demo/**
     stefanservice: /stefanPutanja/**
