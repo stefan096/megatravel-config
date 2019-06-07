@@ -1,6 +1,6 @@
 # For random port, the property is set to 0
 server:
-  port: 8888
+  port: 5555
   # ssl:
   #   enabled: true
   #   key-store: classpath:booker.p12
