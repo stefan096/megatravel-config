@@ -52,6 +52,4 @@ zuul:
     search: /search/**
     Rating: /rating/**
     MessagingService: /message/**
-    demosarservice:
-      path: /demosoapandrest/**
-      stripPrefix: false
+    demosarservice: /demosoapandrest/**
