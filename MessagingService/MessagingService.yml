@@ -1,6 +1,6 @@
 # For random port, the property is set to 0
 server:
-  port: 0
+  port: 3333
 
 logging:
     level:
