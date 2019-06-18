@@ -39,7 +39,7 @@ hystrix:
 
 zuul:
   sensitiveHeaders: Cookie, Set-Cookie
-  ignored-services: stefanservice, demoservice, converterservice, loginAndRegistration, front, demosarservice, search, MessagingService, Rating
+  ignored-services: stefanservice, demoservice, converterservice, loginAndRegistration, front, demosarservice, search, MessagingService, Rating, accommodationservice
   prefix:  /api
   host:
     socket-timeout-millis: 30000
@@ -53,3 +53,4 @@ zuul:
     Rating: /rating/**
     MessagingService: /message/**
     demosarservice: /demosoapandrest/**
+    accommodationservice: /accommodationservice/**
